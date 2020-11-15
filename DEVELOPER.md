@@ -9,9 +9,9 @@
 ## Docker
 Building Image: `docker build --tag kmq:1.0 .`  
 
-Running Image: `docker run --network="host"--mount type=bind,source=[host_song_cache_dir],target=[container_song_cache_dir] --mount type=bind,source=[host_log_dir],target=[container_log_dir] kmq:1.0`.
+Running Image: `docker run --network="host"--mount type=bind,source=[host_song_cache_dir],target=[container_song_cache_dir] --env-file=.env kmq:1.0`.
 
-The target directories should match the ones specified in `.env` and `log_config.json`. 
+The target directory should match the ones specified in `.env`. 
 
 ## First Time Setup
 ------------
